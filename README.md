@@ -1,19 +1,24 @@
 # Text-to-Images-Leveraging-Flux-API-for-Text-to-Image-Generation
 we explores the fascinating domain of text-to-image generation using the powerful capabilities of the Flux API. The objective is to transform textual descriptions into vivid and accurate visual representations, leveraging state-of-the-art artificial intelligence
 
-FLUX.1 AI is an advanced text-to-image generation model that transforms detailed text prompts into stunning, high-quality images. Utilizing a 12B parameter rectified flow transformer, it offers exceptional prompt adherence, visual quality, and style diversity. Users can select from three models: FLUX.1 [pro], FLUX.1 [dev], and FLUX.1 [schnell], catering to various needs from commercial applications to rapid prototyping. The model excels in generating intricate scenes and supports diverse aspect ratios, making it a versatile tool for artists and designers alike.
+**FLUX.1** AI is an advanced text-to-image generation model that transforms detailed text prompts into stunning, high-quality images. Utilizing a 12B parameter rectified flow transformer, it offers exceptional prompt adherence, visual quality, and style diversity. Users can select from three models: **FLUX.1 [pro]**, **FLUX.1 [dev]**, and **FLUX.1 [schnell]**, catering to various needs from commercial applications to rapid prototyping. The model excels in generating intricate scenes and supports diverse aspect ratios, making it a versatile tool for artists and designers alike.
 
 Black Forest Labs, a startup formed by some of the original Stable Diffusion minds, has unleashed a family of models called Flux, and they’re absolutely insane. These models are so good at text rendering that they’ve got even the most seasoned AI artists talking.
 
 Three Models, Three Strengths:
 
-`Flux Pro` is the powerhouse, offering incredible image quality but available only through APIs .
+`Flux Pro` is the powerhouse, offering incredible image quality but available only through APIs.
+[fal Playgroung here](https://fal.ai/models/fal-ai/flux-pro?ref=blog.fal.ai)
 
 `Flux Dev` is open-weight, allowing developers to tinker and experiment, but it’s not for commercial use. Directly distilled from FLUX.1 pro, [FLUX.1 dev](https://github.com/black-forest-labs/flux/blob/main/model_licenses/LICENSE-FLUX1-dev) obtains similar quality and prompt adherence capabilities, while being more efficient than a standard model of the same size.
 
-`Flux Schnell` is the most accessible, with open source licensing and available on Hugging Face, making it perfect for personal projects or integrations with tools like Diffusers or Comfy UI.it is  fastest model is tailored for local development and personal use. FLUX.1 [schnell] is openly available under an [Apache2.0 license.](https://github.com/black-forest-labs/flux/blob/main/model_licenses/LICENSE-FLUX1-schnell)
+[fal Playground here](https://fal.ai/models/fal-ai/flux/dev?ref=blog.fal.ai)
 
-1. Calling the API
+`Flux Schnell` is the most accessible, with open source licensing and available on Hugging Face, making it perfect for personal projects or integrations with tools like Diffusers or Comfy UI.it is  fastest model is tailored for local development and personal use. FLUX.1 [schnell] is openly available under an [Apache2.0 license.](https://github.com/black-forest-labs/flux/blob/main/model_licenses/LICENSE-FLUX1-schnell) 
+
+[fal Playground here](https://fal.ai/models/fal-ai/flux/schnell?ref=blog.fal.ai)
+
+**1. Calling the API**
 
 Install the client
 
@@ -22,40 +27,40 @@ The client provides a convenient way to interact with the model API.
 ```python
 pip install fal-client
 ```
-2. Schema
-2.1 Input
+**2. Schema**
+**2.1 Input**
 #
 `prompt`    *string*
 
 The prompt to generate an image from.
 
-`image_size`     ImageSize | Enum
+`image_size`     *ImageSize | Enum*
 
 The size of the generated image. Default value: landscape_4_3
 
 Possible values: "square_hd", "square", "portrait_4_3", "portrait_16_9", "landscape_4_3", "landscape_16_9"
 
-`num_inference_steps`      integer
+`num_inference_steps`      *integer*
 
 The number of inference steps to perform. Default value: 28
 
-`seed `       integer
+`seed `       *integer*
 
 The same seed and the same prompt given to the same version of the model will output the same image every time.
 
-`guidance_scale` float
+`guidance_scale` *float*
 
 The CFG (Classifier Free Guidance) scale is a measure of how close you want the model to stick to your prompt when looking for a related image to show you. Default value: 3.5
 
-`sync_mode`    boolean
+`sync_mode`    *boolean*
 
 If set to true, the function will wait for the image to be generated and uploaded before returning the response. This will increase the latency of the function but it allows you to get the image directly in the response without going through the CDN.
 
-`num_images`    integer
+`num_images`    *integer*
 
 The number of images to generate. Default value: 1
 
-`enable_safety_checker`    boolean
+`enable_safety_checker`    *boolean*
 
 If set to true, the safety checker will be enabled. Default value: true
 
@@ -71,7 +76,7 @@ If set to true, the safety checker will be enabled. Default value: true
 }
 ```
 
-2.2 Output
+**2.2 Output**
 #
 
 `images`    list<Image>
@@ -164,3 +169,12 @@ The performance of the flux models is can be shown as
 # Transformer-powered Flow Models at Scale 
 
 All public FLUX.1 models are based on a `Hybrid architecture` of [multimodal](https://arxiv.org/abs/2403.03206) and [parallel](https://arxiv.org/abs/2302.05442) [diffusion transformer](https://arxiv.org/abs/2212.09748) blocks and scaled to 12B parameters. We improve over previous state-of-the-art diffusion models by building on [flow matching](https://arxiv.org/abs/2210.02747), a general and conceptually simple method for training generative models, which includes diffusion as a special case. In addition, we increase model performance and improve hardware efficiency by incorporating [rotary positional embeddings](https://arxiv.org/abs/2104.09864) and [parallel attention layers](https://arxiv.org/abs/2302.05442). We will publish a more detailed tech report in the near future.
+# Key Features:
+
+**Enhanced Image Quality:** Generate stunning visuals at higher resolutions.
+
+**Advanced Human Anatomy and Photorealism:** Achieve highly realistic and anatomically accurate images.
+
+**Improved Prompt Adherence:** Get more accurate and relevant images based on your inputs.
+
+**Exceptional Speed:** Benefit from the speed and efficiency of Flux Schnell, ideal for high-demand applications.
