@@ -9,9 +9,9 @@ Three Models, Three Strengths:
 
 `Flux Pro` is the powerhouse, offering incredible image quality but available only through APIs .
 
-`Flux Dev` is open-weight, allowing developers to tinker and experiment, but it’s not for commercial use.
+`Flux Dev` is open-weight, allowing developers to tinker and experiment, but it’s not for commercial use. Directly distilled from FLUX.1 pro, [FLUX.1 dev](https://github.com/black-forest-labs/flux/blob/main/model_licenses/LICENSE-FLUX1-dev) obtains similar quality and prompt adherence capabilities, while being more efficient than a standard model of the same size.
 
-`Flux Schnell` is the most accessible, with open source licensing and available on Hugging Face, making it perfect for personal projects or integrations with tools like Diffusers or Comfy UI.
+`Flux Schnell` is the most accessible, with open source licensing and available on Hugging Face, making it perfect for personal projects or integrations with tools like Diffusers or Comfy UI.it is  fastest model is tailored for local development and personal use. FLUX.1 [schnell] is openly available under an [Apache2.0 license.](https://github.com/black-forest-labs/flux/blob/main/model_licenses/LICENSE-FLUX1-schnell)
 
 1. Calling the API
 
@@ -90,18 +90,7 @@ Whether the generated images contain NSFW concepts.
 
 `prompt`    string
 
-The prompt used for generating the image.
 
-
-{
-  "images": [
-    {
-      "url": "",
-      "content_type": "image/jpeg"
-    }
-  ],
-  "prompt": ""
-}
 
 
 
@@ -166,3 +155,12 @@ print(response)
 The  output for the above code is as 
 
 ![Image](https://fal.media/files/koala/JkGwq09qZJvJn9m-Z7WgJ.png)
+
+The performance of the flux models is can be shown as 
+ ![graph](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*JsAH9orfUoKwcSjQCrdiPg.png)
+ 
+ Performance That’s Off the Charts: Flux is not just pretty, it’s lightning fast. We’re taking under 2 seconds to generate high-quality images, which is a game-changer for anyone who’s ever waited impatiently for their AI to churn out results. This speed makes it perfect for real-time applications, like image generation for video content creation or live streaming.
+
+# Transformer-powered Flow Models at Scale 
+
+All public FLUX.1 models are based on a `Hybrid architecture` of [multimodal](https://arxiv.org/abs/2403.03206) and [parallel](https://arxiv.org/abs/2302.05442) [diffusion transformer](https://arxiv.org/abs/2212.09748) blocks and scaled to 12B parameters. We improve over previous state-of-the-art diffusion models by building on [flow matching](https://arxiv.org/abs/2210.02747), a general and conceptually simple method for training generative models, which includes diffusion as a special case. In addition, we increase model performance and improve hardware efficiency by incorporating [rotary positional embeddings](https://arxiv.org/abs/2104.09864) and [parallel attention layers](https://arxiv.org/abs/2302.05442). We will publish a more detailed tech report in the near future.
