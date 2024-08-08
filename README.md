@@ -165,7 +165,7 @@ The  output for the above code is as
 
 ![Image](https://fal.media/files/koala/JkGwq09qZJvJn9m-Z7WgJ.png)
 # Architecture of Flux
-![Flux Architecture](https://github.com/user-attachments/assets/a34912ad-84b9-4b70-aa21-7e2e12f40d1a)
+![Flux Architecture](https://miro.medium.com/v2/resize:fit:2000/format:webp/1*jimrk63TGPsqQWdCfb9-gw.png)
 
  The above Architecture diagram explains How text(Prompt) will be Process and generates an image from the input text
 
