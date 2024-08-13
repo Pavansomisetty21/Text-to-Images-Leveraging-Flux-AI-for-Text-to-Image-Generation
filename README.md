@@ -1,5 +1,5 @@
-# Text-to-Images-Leveraging-Flux-API-for-Text-to-Image-Generation
-we explores the fascinating domain of text-to-image generation using the powerful capabilities of the Flux API. The objective is to transform textual descriptions into vivid and accurate visual representations, leveraging state-of-the-art artificial intelligence
+# Text-to-Images-Leveraging-Flux-AI-for-Text-to-Image-Generation
+we explores the fascinating domain of text-to-image generation using the powerful capabilities of the Flux AI with API key. The objective is to transform textual descriptions into vivid and accurate visual representations, leveraging state-of-the-art artificial intelligence
 
 # What is Flux AI Image?
 Flux AI image is a cutting-edge text-to-image generator that leverages advanced AI techniques to transform textual descriptions into stunning visuals. This innovative tool is the brainchild of Black Forest Labs, a company comprised of AI luminaries who played pivotal roles in the development of Stable Diffusion. With a focus on pushing the boundaries of generative AI, Flux AI image aims to deliver exceptional image quality, accuracy, and versatility.
